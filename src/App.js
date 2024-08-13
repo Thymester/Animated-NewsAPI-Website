@@ -3,7 +3,7 @@ import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
-const apiKey = 'Your-API-Key'; // Replace with your NewsAPI API key
+const apiKey = 'ff574d8fe989486b859daf04c7b346e4'; // Replace with your NewsAPI API key
 const articlesPerPage = 9; // Number of articles to display per page
 
 function App() {
@@ -20,7 +20,7 @@ function App() {
     const fetchNews = async () => {
       try {
         const response = await axios.get(
-          `https://newsapi.org/v2/top-headlines?country=us&apiKey=${apiKey}`
+          `https://newsapi.org/v2/top-headlines?country=us&category=technology&apiKey=${apiKey}`
         );
         setArticles(response.data.articles);
         setLoading(false);
